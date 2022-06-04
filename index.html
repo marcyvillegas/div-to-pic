@@ -5,20 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
     <title>trying to html2canvas</title>
+
+    <style>
+        .whole {
+            width: 70%;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .capture {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #4B5D67;
+        }
+
+        .capture p {
+            padding: 4rem;
+            color: #BDF2D5;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 1rem;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="capture">
-            <p>Try to capture this</p>
+    <div class="whole">
+        <div class="container">
+            <div class="capture">
+                <p>Try to capture this</p>
+            </div>
         </div>
-    </div>
 
-    <div class="button-container">
-        <button>Capture</button>
+        <div class="button-container">
+            <button>Capture</button>
+        </div>
     </div>
 </body>
 
