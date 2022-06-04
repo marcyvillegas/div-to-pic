@@ -35,6 +35,7 @@
             display: flex;
             justify-content: flex-start;
             margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     </style>
 
@@ -50,15 +51,22 @@
         </div>
 
         <div class="button-container">
-            <button onclick="capture()">Capture</button>
+            <button id="button-capture">Capture</button>
         </div>
     </div>
 </body>
 
 <script src="html2canvas.min.js"></script>
 <script>
+
+    const wholeContainer = document.querySelector(".whole");
+    const buttonCapture = document.querySelector("#button-capture");
+
     html2canvas(document.querySelector(".capture")).then(canvas => {
-    document.body.appendChild(canvas)
-});
+        buttonCapture.onclick = function () {
+            wholeContainer.appendChild(canvas)
+        }
+    });
 </script>
+
 </html>
