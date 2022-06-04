@@ -1,0 +1,23 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.capture {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: #4B5D67;
+}
+
+.capture p {
+    padding: 4rem; 
+    color: #BDF2D5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
