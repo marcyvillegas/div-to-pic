@@ -1,2 +1,9 @@
-LOGIC
-- 
+LOGIC:
+- There will be 4 buttons:
+1. Display only the canvas ONCE
+2. Copy the canvas 
+3. Atoumatically download the canvas
+4. Show in modal with 'Download' button
+
+- Use async functions instead of promises
+- Use onclick even in HTML instead in js
