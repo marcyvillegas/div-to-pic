@@ -34,8 +34,13 @@
         .button-container {
             display: flex;
             justify-content: flex-start;
+            gap: 0.5rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
+        }
+
+        button {
+            cursor: pointer;
         }
     </style>
 
@@ -51,11 +56,13 @@
         </div>
 
         <div class="button-container">
-            <button onclick="displayCanvas()" id="button-capture">Capture</button>
+            <button onclick="displayCanvas()">Display</button>
+            <button onclick="">Copy</button>
+            <button onclick="">Download</button>
+            <button onclick="">Show</button>
         </div>
     </div>
 </body>
 
 <script src="/js/main.js"></script>
-
 </html>

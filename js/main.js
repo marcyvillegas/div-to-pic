@@ -4,6 +4,7 @@
  */
 const wholeContainer = document.querySelector(".whole");
 
+
 const displayCanvas = async () => {
 
     console.log("wait");
