@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trying to html2canvas</title>
-
+    <script src="/js/html2canvas.min.js"></script>
     <style>
         .whole {
             width: 70%;
@@ -51,22 +51,11 @@
         </div>
 
         <div class="button-container">
-            <button id="button-capture">Capture</button>
+            <button onclick="displayCanvas()" id="button-capture">Capture</button>
         </div>
     </div>
 </body>
 
-<script src="html2canvas.min.js"></script>
-<script>
-
-    const wholeContainer = document.querySelector(".whole");
-    const buttonCapture = document.querySelector("#button-capture");
-
-    html2canvas(document.querySelector(".capture")).then(canvas => {
-        buttonCapture.onclick = function () {
-            wholeContainer.appendChild(canvas)
-        }
-    });
-</script>
+<script src="/js/main.js"></script>
 
 </html>
