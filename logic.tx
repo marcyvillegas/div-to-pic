@@ -1,9 +1,8 @@
 LOGIC:
-- There will be 4 buttons:
+- There will be 3 buttons:
 1. Display only the canvas ONCE
 2. Copy the canvas 
 3. Atoumatically download the canvas
-4. Show in modal with 'Download' button
 
 NEEDS:
 - functions for the onclick events

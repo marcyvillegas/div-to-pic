@@ -2,6 +2,7 @@
 // Declare variable for the exstingn html elements
 const wholeContainer = document.querySelector(".whole");
 const divToCapture = document.querySelector(".capture");
+const displayButton = document.querySelector("#display-button");
 
 // Declare variables for the newly added html elements
 let removeButton;
@@ -18,23 +19,35 @@ const displayCanvas = async () => {
     const canvas = await html2canvas(divToCapture);
     console.log("displayed");
 
-    // add remove button
+    // create remove button
     removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
 
-    // append canvas to div container
+    // append canvas and remove button to div container
     addedCanvas = wholeContainer.appendChild(canvas);
     wholeContainer.appendChild(removeButton);
+
+    // disabling display button
+    if(removeButton){
+        displayButton.disabled = true;
+    }
 
     // event listenter that removes the added elements
     removeButton.addEventListener("click", removeCanvas);
 }
 
 /**
- * Function that remove the displayed canvas
+ * Function that removes the displayed canvas
  */
 const removeCanvas = () => {
-    console.log("removed")
+
     addedCanvas.remove();
     removeButton.remove();
+    
+    displayButton.disabled = false;
+    console.log("removed")
 }
+
+/**
+ * Function that copies the captured canvas
+ */
