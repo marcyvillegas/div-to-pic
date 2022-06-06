@@ -51,8 +51,18 @@ const removeCanvas = () => {
 /**
  * Function that copies the captured canvas
  */
-const copyCanvas = () => {
+const copyCanvas = async () => {
 
+    // returns canvas
+    const canvas = await html2canvas(divToCapture);
+
+    // 
+    canvas.toBlob(function (blob) {
+        const item = new ClipboardItem({ "image/png": blob });
+        navigator.clipboard.write([item]);
+    });
+
+    alert("You have copied the canvas.");
 }
 
 /**
@@ -71,7 +81,7 @@ const downloadCanvas = async () => {
     divToCapture.appendChild(downloadAttribute);
 
     // downloads the canvas
-    downloadAttribute.setAttribute('download','test.png');
-    downloadAttribute.setAttribute('href',image);
+    downloadAttribute.setAttribute('download', 'test.png');
+    downloadAttribute.setAttribute('href', image);
     downloadAttribute.click();
 }
