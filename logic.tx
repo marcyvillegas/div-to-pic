@@ -5,8 +5,10 @@ LOGIC:
 3. Atoumatically download the canvas
 4. Show in modal with 'Download' button
 
+NEEDS:
+- functions for the onclick events
 
+NOTE:
 - Use async functions instead of promises
-- Use onclick even in HTML instead in jss
+- Use onclick even in HTML instead in js
 
-- add different function for returning the value of html2canvas
