@@ -10,7 +10,7 @@ So I figured out other ways on utilizing it. <br>
 <hr>
 
 ### Displaying and removing
-Adding a remove button when the canvas is displayed.
+Adding a remove button when the canvas is displayed. I also used asynchronous functions instead of promises.
 ```javascript
 const displayCanvas = async () => {
 
