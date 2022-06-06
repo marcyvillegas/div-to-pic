@@ -56,7 +56,7 @@ const copyCanvas = async () => {
     // returns canvas
     const canvas = await html2canvas(divToCapture);
 
-    // 
+    // copies the imgae using Clipboard API
     canvas.toBlob(function (blob) {
         const item = new ClipboardItem({ "image/png": blob });
         navigator.clipboard.write([item]);
