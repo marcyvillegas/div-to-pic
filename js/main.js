@@ -3,33 +3,34 @@
 const wholeContainer = document.querySelector(".whole");
 const divToCapture = document.querySelector(".capture");
 
-// Declare variables for the newly created elements
-let addedCanvas;
-let removeButton;
 
 /**
- * Async function that displays the captured canvas
+ * Async function that displays the captured canvas 
+ * @returns {button element} the remove button element
  */
 const displayCanvas = async () => {
 
     // returns canvas
-    console.log("wait");
+    console.log("waiting");
     const canvas = await html2canvas(divToCapture);
-    console.log("alright");
+    console.log("displayed");
 
     // add remove button
-    removeButton = document.createElement("button");
+    let removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
 
     // append canvas to div container
-    addedCanvas = wholeContainer.appendChild(canvas);
+    let addedCanvas = wholeContainer.appendChild(canvas);
     wholeContainer.appendChild(removeButton);
+
+    removeButton.onclick = () => {
+
+        console.log("removed")
+        addedCanvas.remove();
+        removeButton.remove();
+    }
 }
 
 /**
- * Removes the displayed canvas
+ * Event listener that removes the displayed canvas
  */
-const removeCanvas = () => {
-
-    
-}
