@@ -28,7 +28,7 @@ const displayCanvas = async () => {
     wholeContainer.appendChild(removeButton);
 
     // disabling display button
-    if(removeButton){
+    if (removeButton) {
         displayButton.disabled = true;
     }
 
@@ -43,7 +43,7 @@ const removeCanvas = () => {
 
     addedCanvas.remove();
     removeButton.remove();
-    
+
     displayButton.disabled = false;
     console.log("removed")
 }
@@ -51,3 +51,27 @@ const removeCanvas = () => {
 /**
  * Function that copies the captured canvas
  */
+const copyCanvas = () => {
+
+}
+
+/**
+ * Function that downloads the captured canvas
+ */
+const downloadCanvas = async () => {
+
+    // returns canvas
+    const canvas = await html2canvas(divToCapture);
+
+    // turn canvas to data url
+    const image = canvas.toDataURL('image/png');
+
+    // creates anchor element and appends to the canvas
+    const downloadAttribute = document.createElement('a');
+    divToCapture.appendChild(downloadAttribute);
+
+    // downloads the canvas
+    downloadAttribute.setAttribute('download','test.png');
+    downloadAttribute.setAttribute('href',image);
+    downloadAttribute.click();
+}
