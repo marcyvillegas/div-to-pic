@@ -3,10 +3,13 @@
 const wholeContainer = document.querySelector(".whole");
 const divToCapture = document.querySelector(".capture");
 
+// Declare variables for the newly added html elements
+let removeButton;
+let addedCanvas;
 
 /**
- * Async function that displays the captured canvas 
- * @returns {button element} the remove button element
+ * Async function that displays the captured canvas
+ * and a remove button
  */
 const displayCanvas = async () => {
 
@@ -16,21 +19,22 @@ const displayCanvas = async () => {
     console.log("displayed");
 
     // add remove button
-    let removeButton = document.createElement("button");
+    removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
 
     // append canvas to div container
-    let addedCanvas = wholeContainer.appendChild(canvas);
+    addedCanvas = wholeContainer.appendChild(canvas);
     wholeContainer.appendChild(removeButton);
 
-    removeButton.onclick = () => {
-
-        console.log("removed")
-        addedCanvas.remove();
-        removeButton.remove();
-    }
+    // event listenter that removes the added elements
+    removeButton.addEventListener("click", removeCanvas);
 }
 
 /**
- * Event listener that removes the displayed canvas
+ * Function that remove the displayed canvas
  */
+const removeCanvas = () => {
+    console.log("removed")
+    addedCanvas.remove();
+    removeButton.remove();
+}
