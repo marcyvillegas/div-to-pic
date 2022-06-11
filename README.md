@@ -6,11 +6,11 @@ html2canvas(document.querySelector("#capture")).then(canvas => {
 });
 ```
 _Code from https://html2canvas.hertzen.com/_ <br><br>
-So I figured out other ways on utilizing it. I also used asynchronous functoins rather than promises. <br>
+So I figured out other ways on utilizing it. I also used asynchronous functions instead of promises.<br>
 <hr>
 
 ### Displaying and removing
-Adding a remove button when the canvas is displayed. I also used asynchronous functions instead of promises.
+Adding a remove button when the canvas is displayed.
 ```javascript
 const displayCanvas = async () => {
 
